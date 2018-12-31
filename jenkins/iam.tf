@@ -64,7 +64,12 @@ resource "aws_iam_role_policy" "Jenkins-iam-role-policy" {
                 "ec2:RunInstances",
                 "ec2:StopInstances",
                 "ec2:TerminateInstances",
-                "s3:*"
+                "s3:*",
+                "ec2:*",
+                "iam:*",
+                "rds:*",
+"elasticloadbalancing:*",
+"autoscaling:*"
             ],
             "Resource": "*"
         }
