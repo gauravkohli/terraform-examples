@@ -20,7 +20,7 @@ resource "aws_instance" "jenkins-instance" {
   # user data
   user_data = "${data.template_cloudinit_config.cloudinit-jenkins.rendered}"
 
-  iam_instance_profile = "${aws_iam_role.Jenkins-iam-s3-role.name}"
+  iam_instance_profile = "${aws_iam_instance_profile.Jenkins-iam-role-instanceprofile.name}"
 
 }
 
